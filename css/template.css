@@ -1,0 +1,420 @@
+@charset "UTF-8";
+
+/* A variation on Eric Meyer's CSS Reset: */
+
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: black;
+}
+ol, ul {
+  list-style: none;
+}
+table {
+  border-collapse:collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote, q {
+  quotes: "" "";
+}
+abbr,acronym {
+  border:0;
+}*/
+
+/* Below are the CSS styles that aren't included with Blueprint. It's a good idea to keep them whether or not you use it unless you know what you're doing. */
+
+/* Text styles */
+.blog-featured h2 { 
+  font-size: 1.5em;
+  margin-bottom:0em; 
+}
+p.readmore {
+  text-indent:0;
+  font-size: .9em;
+}
+.joomla-footer {
+  font-size: .9em;
+  margin-bottom: 30px;
+}
+
+/* Article functions */
+ul.actions {
+  clear:both;
+  margin-top: -50px;
+  float:right;
+}
+ul.actions li {
+  list-style-type: none;
+  float:right;
+  margin-left: 10px;
+}
+
+/* Login styles */
+p#form-login-username label,
+p#form-login-password label {
+  width: 160px;
+  display:block;
+}
+p#form-login-remember label {
+  font-size: .9em;
+  font-weight: normal;
+  line-height: 25px;
+}
+p#form-login-remember input {
+  float:left;
+  margin-right: 5px;
+}
+form#form-login ul {
+  margin: 0;
+  padding: 0;
+}
+form#form-login ul li {
+  list-style-type: none;
+  margin-left: 20px;
+  font-size: .9em;
+}
+
+/* ========================================================================== */
+/* START TEMPLATE                                                             */
+/* ========================================================================== */
+
+html
+{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+body
+{
+  background-color: #eee;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#aaa 6em), to(#eee 30em));
+  background-image: -webkit-linear-gradient(top, #aaa 6em, #eee 30em);
+  background-image:    -moz-linear-gradient(top, #aaa 6em, #eee 30em);
+  background-image:     -ms-linear-gradient(top, #aaa 6em, #eee 30em);
+  background-image:      -o-linear-gradient(top, #aaa 6em, #eee 30em);
+  background-image:         linear-gradient(to bottom, #aaa 6em, #eee 30em);
+}
+
+body,
+body > header > *
+{
+  max-width: 1024px;
+  min-width: 780px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* header */
+
+body > header
+{
+  min-width: 780px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #333;  
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#111));
+  background-image: -webkit-linear-gradient(top, #444, #111);
+  background-image:    -moz-linear-gradient(top, #444, #111);
+  background-image:     -ms-linear-gradient(top, #444, #111);
+  background-image:      -o-linear-gradient(top, #444, #111);
+  background-image:         linear-gradient(to bottom, #444, #111);
+}
+
+body > header h1
+{
+  color: #eee;
+  margin-top: 0.75em;
+/*  display: none;
+  background-color: red; */
+}
+
+body > header > *
+{
+  max-width: 850px;
+}
+
+/* Top module block */
+#module-top
+{
+  position: relative;
+  top: -12em;
+  margin: 0 -1% -12em;
+  width: 102%;
+  text-align: center;
+  background: transparent;
+  overflow: hidden;
+  
+  -webkit-box-shadow: 0 0 18px #333;
+     -moz-box-shadow: 0 0 18px #333;
+          box-shadow: 0 0 18px #333;
+
+  -webkit-border-radius: 18px 18px 0 0;
+     -moz-border-radius: 18px 18px 0 0;
+          border-radius: 18px 18px 0 0;
+}
+
+#module-top > .image
+{
+  background-position: center;
+}
+
+/* language switcher */
+
+.mod-languages
+{
+  position: relative;
+  height: 100%;
+}
+
+.mod-languages > ul
+{
+  position: absolute;
+  bottom: 0.2em;
+  right: 0.2em;
+}
+
+.mod-languages img
+{
+  margin: 2px;
+  padding: 0;
+}
+
+li.lang-active img
+{
+  border: 1px solid #f07746;
+  margin: 1px;
+}
+
+.mod-languages a:hover > img,
+.mod-languages a:focus > img
+{
+  border: 2px dotted #f07746;
+  margin: 0;
+}
+
+/* nav */
+
+body > nav
+{
+  width: 100%;
+  margin-top: 6em;
+}
+
+body > nav > ul
+{
+  position: relative; /* prevent box shadow overlaying menu */
+}
+
+body > nav,
+body > section
+{
+  float: left;
+
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 18px #000;
+     -moz-box-shadow: 0 0 18px #000;
+          box-shadow: 0 0 18px #000;
+}
+
+/* breadcrumbs */
+
+.breadcrumbs
+{
+  font-size: 0.75em;
+  color: #999;
+  margin: 1em 0 0;
+}
+
+/* main section */
+
+body > section
+{
+  width: 98%;
+  padding: 1%;
+  min-height: 360px;
+
+  -webkit-border-radius: 0 0 18px 18px;
+     -moz-border-radius: 0 0 18px 18px;
+          border-radius: 0 0 18px 18px;
+}
+
+body > section img,
+body > section video
+{
+  max-width: 98%;
+  border-radius: 18px;
+  box-shadow: 4px 4px 8px #333;
+  margin: 1%;
+}
+
+.item
+{
+  float: left;
+  width: 100%;
+}
+
+.img-intro-left
+{
+  float: left;
+  margin: 0 1em 0.5em 0;
+}
+
+/* footer */
+
+body > footer
+{
+  font-family: sans-serif;
+  font-size: 0.75em;
+  float: left;
+  margin-top: 0.25em;
+  padding: 0.25em 0.5%;
+  width: 99%;
+}
+
+#copyright
+{
+  float: left;
+}
+
+body > footer > nav
+{
+  float: right;
+}
+
+#copyright,
+body > footer > nav
+{
+  padding: 0.25em 0;
+}
+
+body > footer li
+{
+  float: left;
+  padding: 0 0.25em;
+}
+
+body > footer li + li
+{
+  border-left: 1px solid #aaa;
+}
+
+body > footer,
+body > footer a
+{
+  text-decoration: none;
+  color: #655;
+}
+
+body > footer a:hover
+{
+  text-decoration: underline;
+}
+
+/* some default styles */
+nav ul
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1
+{
+  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+}
+
+#system-debug
+{
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* ---------------------------------- */
+/* geshi                              */
+/* ---------------------------------- */
+
+pre
+{
+  position: relative;
+  background-color: #efd;
+  border: 1px dotted #aaa;
+  padding: 0.5em;
+  margin: 32px 0 0.5em;
+  clear: both;
+}
+
+pre:before
+{
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: -24px;
+  right: 0;
+}
+
+pre.cpp:before
+{
+  background-image: url(../images/code/cpp.png);
+}
+
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+
+.cpp
+{
+  font-family:monospace;
+}
+
+.cpp .imp {color: #ff0000; font-weight: bold;}
+.cpp .kw1 {color: #0000ff;}
+.cpp .kw2 {color: #0000ff;}
+.cpp .kw3 {color: #880088; font-weight: bold;}
+.cpp .kw4 {color: #0000ff;}
+.cpp .co1 {color: #339900;}
+.cpp .coMULTI {color: #339900; font-style: italic;}
+.cpp .es0 {color: #666666; font-weight: bold;}
+.cpp .br0 {color: #000000;}
+.cpp .sy0 {color: #000000;}
+.cpp .st0 {color: #800000;}
+.cpp .nu0 {color: #0000dd;}
+.cpp .me1 {color: #000000;}
+.cpp .me2 {color: #006600;}
+.cpp span.xtra { display:block; }

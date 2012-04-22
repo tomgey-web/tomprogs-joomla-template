@@ -1,0 +1,126 @@
+/* -----------------------------------------------------------------------
+
+ Joomla Nav 0.1 for the Blueprint CSS Framework
+ http://blueprintcss.org
+
+   * Copyright (c) 2011. Refer to the main Blueprint license.
+   * See README for instructions on how to use this plugin.
+   * For credits and origins, see AUTHORS.
+
+----------------------------------------------------------------------- */
+
+.joomla-nav
+{
+  border-bottom: 1px solid #999;
+  margin: 1em 0 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+
+.joomla-nav > li
+{
+  float: left;
+  margin: 0 0 -1px;
+  padding: 0;
+  display: block;
+}
+
+.joomla-nav .parent
+{
+  position:relative;
+}
+
+.joomla-nav .parent > a
+{
+  padding-right: 1em;
+}
+
+.joomla-nav .parent li
+{
+  width: auto;
+  border: 1px solid #999;
+  border-right: none;
+}
+
+.joomla-nav .parent li + li
+{
+  border-top: none;
+}
+
+.joomla-nav li ul
+{
+/*  display:none;*/
+  position:absolute;
+  top:1.8em;
+  left:-1px;
+  z-index: 1;
+  margin-top: -1px;
+  width: 14em;
+/*  border: 1px solid red; * /
+  background-color: #333;
+  color: #fff;
+
+  -webkit-box-shadow: 1px 3px 6px 1px #f07746; /* Saf3-4 */
+     -moz-box-shadow: 1px 3px 6px 1px #f07746; /* FF3.5 - 3.6 */
+          box-shadow: 1px 3px 6px 1px #f07746; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+}
+/*
+.joomla-nav li:hover ul
+{
+  display:inline;
+}
+*/
+.joomla-nav li a,
+.joomla-nav li .separator
+{
+  color: #ddd;
+  cursor: pointer;
+  display: block;
+  padding: 0.3em 0.6em;
+  margin: 0;
+  min-height: 1.225em;
+}
+
+.joomla-nav li a.selected
+{
+  color: #555;
+  cursor: default;
+}
+
+.joomla-nav a
+{
+  text-decoration:none;
+}
+/*
+.joomla-nav .parent > a
+{
+  background: url(arrow-down.png) no-repeat right center;
+}
+*/
+.joomla-nav a:focus,
+.joomla-nav a:hover,
+.joomla-nav .selected > a
+{
+  color: #F07746;
+  outline: none;
+  border-bottom: 1px solid #F07746;
+}
+/*
+.joomla-nav .parent > a:focus,
+.joomla-nav .parent > a:hover,
+.joomla-nav .parent.selected > a
+{
+  background-image: url(arrow-down.png), -webkit-gradient(linear, left top, left bottom, from(#666), to(#333)); /* Saf4+, Chrome * /
+  background-image: url(arrow-down.png), -webkit-linear-gradient(top, #f0a282, #f07746); /* Chrome 10+, Saf5.1+, iOS 5+ * /
+  background-image: url(arrow-down.png), -moz-linear-gradient(top, #f0a282, #f07746); /* FF3.6 * /
+  background-image: url(arrow-down.png),    -ms-linear-gradient(top, #f0a282, #f07746); /* IE10 * /
+  background-image: url(arrow-down.png),     -o-linear-gradient(top, #f0a282, #f07746); /* Opera 11.10+ * /
+  background-image: url(arrow-down.png),        linear-gradient(top, #f0a282, #f07746);
+}
+*/
+.joomla-nav img
+{
+  max-width: 4em;
+  margin-right: 0.2em;
+}
