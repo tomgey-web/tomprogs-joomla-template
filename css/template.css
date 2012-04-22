@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
 /* A variation on Eric Meyer's CSS Reset: */
-
-/*html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
@@ -23,7 +22,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
   line-height: 1;
   color: black;
-}
+}/*
 ol, ul {
   list-style: none;
 }
@@ -107,13 +106,10 @@ form#form-login ul li {
 
 html
 {
-  margin: 0;
-  padding: 0;
   text-align: center;
   width: 100%;
   min-height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  position: relative;
 }
 
 body
@@ -127,7 +123,7 @@ body
   background-image:         linear-gradient(to bottom, #aaa 6em, #eee 30em);
 }
 
-body,
+#content-box,
 body > header > *
 {
   max-width: 1024px;
@@ -142,9 +138,8 @@ body > header
 {
   min-width: 780px;
   width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
+  float: left;
+
   background-color: #333;  
   background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#111));
   background-image: -webkit-linear-gradient(top, #444, #111);
@@ -152,12 +147,18 @@ body > header
   background-image:     -ms-linear-gradient(top, #444, #111);
   background-image:      -o-linear-gradient(top, #444, #111);
   background-image:         linear-gradient(to bottom, #444, #111);
+
+  -webkit-box-shadow: 0 5px 38px #333;
+     -moz-box-shadow: 0 5px 38px #333;
+          box-shadow: 0 5px 38px #333;
 }
 
 body > header h1
 {
   color: #eee;
   margin-top: 0.75em;
+  font-size: 2em;
+  font-weight: bold;
 /*  display: none;
   background-color: red; */
 }
@@ -172,7 +173,7 @@ body > header > *
 {
   position: relative;
   top: -12em;
-  margin: 0 -1% -12em;
+  margin: 0 -1% -11em;
   width: 102%;
   text-align: center;
   background: transparent;
@@ -240,7 +241,7 @@ body > nav > ul
 }
 
 body > nav,
-body > section
+#content-box > section
 {
   float: left;
 
@@ -256,12 +257,12 @@ body > section
 {
   font-size: 0.75em;
   color: #999;
-  margin: 1em 0 0;
+  margin: 0;
 }
 
 /* main section */
 
-body > section
+#content-box > section
 {
   width: 98%;
   padding: 1%;
@@ -272,13 +273,35 @@ body > section
           border-radius: 0 0 18px 18px;
 }
 
-body > section img,
-body > section video
+#content-box > section img,
+#content-box > section video
 {
   max-width: 98%;
   border-radius: 18px;
   box-shadow: 4px 4px 8px #333;
   margin: 1%;
+}
+
+#content-box p, h1, h2, h3
+{
+  margin: 0.5em 0;
+}
+
+#content-box h1
+{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#content-box h2
+{
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#content-box ul, ol
+{
+  padding: 0 0 0 2em;
 }
 
 .item
@@ -295,12 +318,12 @@ body > section video
 
 /* footer */
 
-body > footer
+#content-box > footer
 {
   font-family: sans-serif;
   font-size: 0.75em;
   float: left;
-  margin-top: 0.25em;
+  margin: 0.25em 0 0.5em;
   padding: 0.25em 0.5%;
   width: 99%;
 }
@@ -310,36 +333,36 @@ body > footer
   float: left;
 }
 
-body > footer > nav
+#content-box > footer > nav
 {
   float: right;
 }
 
 #copyright,
-body > footer > nav
+#content-box > footer > nav
 {
   padding: 0.25em 0;
 }
 
-body > footer li
+#content-box > footer li
 {
   float: left;
   padding: 0 0.25em;
 }
 
-body > footer li + li
+#content-box > footer li + li
 {
   border-left: 1px solid #aaa;
 }
 
-body > footer,
-body > footer a
+#content-box > footer,
+#content-box > footer a
 {
   text-decoration: none;
   color: #655;
 }
 
-body > footer a:hover
+#content-box > footer a:hover
 {
   text-decoration: underline;
 }

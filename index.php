@@ -43,13 +43,14 @@ $this->setTitle( $this->getTitle() . ' - ' . $app->getCfg('sitename') );
     <![endif]-->
   </head>
   <body>
-<?php $height = $this->countModules('top') ? 20 : 8; ?>
-    <header style="height:<?=$height?>em;">
+<?php $offset = $this->countModules('top') ? 13.5 : 1.5; ?>
+    <header style="padding-bottom:<?=$offset?>em;">
       <h1><?php echo $app->getCfg('sitename'); ?></h1>
       <jdoc:include type="modules" name="header" style="none" />
       <jdoc:include type="modules" name="top-nav" style="none" />
     </header>
-    <section style="margin-top:<?=$height?>em;">
+    <div id="content-box">
+    <section>
 <?php if( $this->countModules('top') ): ?>
       <div id="module-top">
         <jdoc:include type="modules" name="top" style="none" />
@@ -63,6 +64,7 @@ $this->setTitle( $this->getTitle() . ' - ' . $app->getCfg('sitename') );
       <jdoc:include type="modules" name="footer" style="none" />
       <span id="copyright">&copy;<?php echo date('Y'); ?> <?=$this->params->get('copyrightHolder')?></span>
     </footer>
+    </div>
     <!-- Piwik -->
     <script src="http://stats.tomprogs.at/piwik.js" type="text/javascript"></script>
     <script type="text/javascript">

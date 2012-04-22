@@ -13,9 +13,13 @@
 {
   border-bottom: 1px solid #999;
   margin: 1em 0 0;
-  padding: 0;
   float: left;
   width: 100%;
+}
+
+.nav-max-2
+{
+  margin-bottom: 1.5em;
 }
 
 .joomla-nav > li
