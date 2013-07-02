@@ -43,7 +43,7 @@ $this->setTitle( $this->getTitle() . ' - ' . $app->getCfg('sitename') );
     <![endif]-->
   </head>
   <body>
-<?php $offset = $this->countModules('top') ? 13.5 : 1.5; ?>
+<?php $offset = $this->countModules('top') ? 13 : 1.5; ?>
     <header style="padding-bottom:<?=$offset?>em;">
       <h1><?php echo $app->getCfg('sitename'); ?></h1>
       <jdoc:include type="modules" name="header" style="none" />

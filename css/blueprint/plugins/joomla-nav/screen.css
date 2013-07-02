@@ -95,6 +95,7 @@
 .joomla-nav a
 {
   text-decoration:none;
+  border-bottom: 1px solid transparent;
 }
 /*
 .joomla-nav .parent > a
@@ -108,7 +109,7 @@
 {
   color: #F07746;
   outline: none;
-  border-bottom: 1px solid #F07746;
+  border-bottom-color: #F07746;
 }
 /*
 .joomla-nav .parent > a:focus,
